@@ -5,74 +5,153 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Himanshu Kumar | PhD Research Scholar</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f8fafc; color: #333; line-height: 1.6; }
+        .container { max-width: 900px; margin: auto; padding: 40px 20px; }
+        h1 { color: #1f3c88; font-size: 2.5rem; margin-bottom: 5px; }
+        h2 { border-bottom: 2px solid #e0e0e0; padding-bottom: 5px; color: #1f3c88; margin-top: 40px; font-size: 1.5rem; }
+        .card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .bg-ellipse { fill: transparent; stroke: #64748b; stroke-width: 2; stroke-dasharray: 8,8; pointer-events: none; }
+        .node { cursor: pointer; }
+        .edge { stroke: #cbd5e1; stroke-width: 2; }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-800">
+<body>
 
-<div class="max-w-4xl mx-auto p-8 bg-white shadow-lg my-10 rounded-lg">
+<div class="container">
+    <!-- Header -->
     <header class="text-center mb-10">
-        <h1 class="text-4xl font-bold text-blue-900">Himanshu Kumar</h1>
-        <p class="text-xl text-slate-600 mt-2">PhD Research Scholar | Indian Institute of Technology (IIT) Ropar</p>
-        <div class="mt-4 space-x-4">
-            <a href="mailto:kumarrhimanshu@gmail.com" class="text-blue-600 hover:underline">Email</a> |
-            <a href="#" class="text-blue-600 hover:underline">Google Scholar</a> |
-            <a href="#" class="text-blue-600 hover:underline">ORCID</a>
-        </div>
+        <h1>Himanshu Kumar</h1>
+        <p class="text-xl text-gray-600">PhD Research Scholar | Indian Institute of Technology (IIT) Ropar</p>
+        <p class="mt-2">
+            <a href="mailto:kumarrhimanshu@gmail.com" class="text-blue-600 hover:underline">Email</a> | 
+            <a href="#" class="text-blue-600 hover:underline">Google Scholar</a> | 
+            <a href="https://github.com/kumarrhimanshu" class="text-blue-600 hover:underline">GitHub</a>
+        </p>
     </header>
 
-    <section class="mb-8">
-        <h2 class="text-2xl font-semibold border-b-2 border-blue-100 pb-2 mb-4 text-blue-900">Research Interests</h2>
-        <p>Core Areas: Algorithmic Graph Theory, Structural Graph Theory, Parameterized Complexity, Combinatorial Optimization, Combinatorial Games on Graphs.</p>
+    <!-- About & Interests -->
+    <section class="card">
+        <h2>About Me</h2>
+        <p>I am a PhD Research Scholar at IIT Ropar specializing in <b>Algorithmic and Structural Graph Theory</b>. My focus lies in designing efficient algorithms for NP-hard problems through structural decomposition (e.g., chordal, interval, and P4-sparse graphs) and parameterized complexity.</p>
     </section>
 
-    <section class="mb-8">
-        <h2 class="text-2xl font-semibold border-b-2 border-blue-100 pb-2 mb-4 text-blue-900">Featured Research Projects</h2>
-        <div class="grid gap-4">
-            <div class="p-4 border rounded bg-slate-50">
-                <h3 class="font-bold text-blue-800">Eternal Relaxed Vertex Cover (ERVC)</h3>
-                <p class="text-sm">Dynamic graph defense model. Analyzed NP-hardness and designed polynomial-time algorithms for chordal graphs.</p>
-                <a href="https://kumarrhimanshu.github.io/GAME_on_graph/" class="text-blue-600 font-bold text-sm hover:underline mt-2 inline-block">🚀 Play the Simulator</a>
-            </div>
-            <div class="p-4 border rounded bg-slate-50">
-                <h3 class="font-bold text-blue-800">Quasi-total Roman Domination (QTRD)</h3>
-                <p class="text-sm">Designed linear-time algorithms for restricted graph classes using structural decomposition.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="mb-8">
-        <h2 class="text-2xl font-semibold border-b-2 border-blue-100 pb-2 mb-4 text-blue-900">Publications & Awards</h2>
-        <ul class="list-disc ml-5 space-y-2">
-            <li><strong>Book Chapter:</strong> "Application of Graph Theory in Detection of Illegal Weapons or Drugs at Port," Advances in Basic and Applied Sciences, 2022.</li>
-            <li><strong>Best Presentation Award:</strong> ICSISE 2026 (Eternal Relaxed Vertex Cover).</li>
-            <li><strong>Academic Rank:</strong> GATE 2023 (AIR 24), JEST 2026 (AIR 09), CSIR NET-JRF 2023 (AIR 34).</li>
+    <section class="card">
+        <h2>Honors, Awards & Fellowships</h2>
+        <ul class="list-disc ml-5">
+            <li><b>International Travel Grant (2026):</b> €1200 support for CP/SAT Doctoral Program, Lisbon.</li>
+            <li><b>Full Travel Fellowship (2026):</b> Financial support for "Complexity as a Kaleidoscope" workshop, Lisbon.</li>
+            <li><b>Best Presentation Award:</b> ICSISE 2026 for "Eternal Relaxed Vertex Cover".</li>
+            <li><b>Best Poster Award:</b> Cynosure & NCAM 2026 for "QTRD on Interval Graphs".</li>
+            <li><b>National Excellence:</b> JEST 2026 (AIR 09), GATE 2023 (AIR 24), CSIR NET-JRF 2023 (AIR 34).</li>
         </ul>
     </section>
 
-    <footer class="text-center mt-12 text-sm text-slate-500">
-        © 2026 Himanshu Kumar
-    </footer>
+    <!-- Game Simulator -->
+    <section class="card" id="game-section">
+        <h2>Interactive Simulator: Eternal Edge Defense</h2>
+        <p class="mb-4">An interactive tool demonstrating the Eternal Relaxed Vertex Cover (ERVC) problem on random graphs.</p>
+        
+        <div class="bg-slate-100 p-4 rounded-lg flex flex-wrap justify-center items-end gap-4 mb-4">
+            <div><label class="block text-sm font-bold">Graph Tiers</label><input type="number" id="input-tiers" min="2" max="5" value="3" class="w-20 p-1 border"></div>
+            <div><label class="block text-sm font-bold">Guards</label><input type="number" id="input-guards" min="1" max="15" value="3" class="w-20 p-1 border"></div>
+            <button id="btn-generate" class="bg-indigo-600 text-white px-4 py-1 rounded font-bold">Generate</button>
+        </div>
+
+        <svg id="graph-svg" viewBox="0 0 800 600" class="w-full h-auto border rounded bg-white"></svg>
+        
+        <div class="mt-4 flex justify-center gap-2">
+            <button id="btn-start" class="bg-green-600 text-white px-4 py-2 rounded">Start Game</button>
+            <button id="btn-reset" class="bg-gray-600 text-white px-4 py-2 rounded">Reset</button>
+        </div>
+
+        <div class="mt-8 border-t pt-6">
+            <h3 class="font-bold text-center mb-2">How to Play</h3>
+            <video controls class="w-full max-w-lg mx-auto rounded shadow">
+                <source src="gameplay.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <!-- Publications -->
+    <section class="card">
+        <h2>Publications</h2>
+        <p><b>Book Chapter:</b> "Application of Graph Theory in Detection of Illegal Weapons or Drugs at Port," <i>Advances in Basic and Applied Sciences in Digital Age</i>, 2022.</p>
+    </section>
+
 </div>
+
+<script>
+    // --- Simulator Logic ---
+    let nodes = [], edges = [], bgShapes = [], guards = new Set(), phase = 1, maxGuardsAllowed = 3;
+    const svg = document.getElementById('graph-svg');
+
+    function generateRandomGraph() {
+        nodes = []; edges = []; bgShapes = []; guards.clear(); phase = 1;
+        let numTiers = parseInt(document.getElementById('input-tiers').value) || 3;
+        maxGuardsAllowed = parseInt(document.getElementById('input-guards').value) || 3;
+        let uTiers = [], vTiers = [], nodeId = 0;
+
+        for(let i=0; i<numTiers; i++) {
+            let uCluster = [], vCluster = [];
+            for(let j=0; j<(Math.floor(Math.random()*3)+1); j++) uCluster.push(nodeId++);
+            for(let j=0; j<(Math.floor(Math.random()*3)+1); j++) vCluster.push(nodeId++);
+            uTiers.push(uCluster); vTiers.push(vCluster);
+        }
+
+        let y = 100;
+        uTiers.forEach(tier => { tier.forEach(id => nodes.push({id, x: 200, y: (y+=70)})); y+=60; });
+        y=100;
+        vTiers.forEach(tier => { tier.forEach(id => nodes.push({id, x: 600, y: (y+=70)})); y+=60; });
+        
+        let h = y + 50;
+        svg.setAttribute('viewBox', `0 0 800 ${h}`);
+        bgShapes.push({cx: 200, cy: h/2, rx: 90, ry: h/2-20}, {cx: 600, cy: h/2, rx: 90, ry: h/2-20});
+
+        for(let i=0; i<numTiers; i++) for(let j=0; j<=i; j++) 
+            uTiers[i].forEach(u => vTiers[j].forEach(v => edges.push({u, v})));
+        draw();
+    }
+
+    function draw() {
+        svg.innerHTML = '';
+        bgShapes.forEach(s => {
+            let el = document.createElementNS("http://www.w3.org/2000/svg", "ellipse");
+            el.setAttribute("cx", s.cx); el.setAttribute("cy", s.cy);
+            el.setAttribute("rx", s.rx); el.setAttribute("ry", s.ry);
+            el.setAttribute("class", "bg-ellipse");
+            svg.appendChild(el);
+        });
+        edges.forEach(e => {
+            let n1 = nodes.find(n=>n.id==e.u), n2 = nodes.find(n=>n.id==e.v);
+            let line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+            line.setAttribute("x1", n1.x); line.setAttribute("y1", n1.y);
+            line.setAttribute("x2", n2.x); line.setAttribute("y2", n2.y);
+            line.setAttribute("class", "edge");
+            svg.appendChild(line);
+        });
+        nodes.forEach(n => {
+            let g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+            g.setAttribute("transform", `translate(${n.x}, ${n.y})`);
+            let c = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+            c.setAttribute("r", 15);
+            c.setAttribute("fill", guards.has(n.id) ? "#fbbf24" : "#93c5fd");
+            g.appendChild(c);
+            g.onclick = () => {
+                if(phase===1) {
+                    if(guards.has(n.id)) guards.delete(n.id);
+                    else if(guards.size < maxGuardsAllowed) guards.add(n.id);
+                    draw();
+                }
+            };
+            svg.appendChild(g);
+        });
+    }
+
+    document.getElementById('btn-generate').onclick = generateRandomGraph;
+    document.getElementById('btn-reset').onclick = generateRandomGraph;
+    generateRandomGraph();
+</script>
 </body>
 </html>
-```
-
-### 2. How to handle your PDFs
-GitHub is a great place to host your papers/certificates.
-1. Create a folder in your `kumarrhimanshu.github.io` repository named `files`.
-2. Upload your `research_methodology.pdf`, `domination_notes.pdf`, etc., into that folder.
-3. In your HTML, link to them like this: `<a href="files/domination_notes.pdf">Notes on Graph Domination</a>`.
-
-### 3. The "Pro" Secret: The Profile README
-GitHub has a hidden feature. If you create a **new repository** with your exact username (e.g., `kumarrhimanshu`), whatever you write in the `README.md` of *that* repo will show up on your main profile page.
-
-**To do this:**
-1. Create a new repository named `kumarrhimanshu`.
-2. Add a `README.md` file.
-3. Put a cool summary about your PhD research, your top 3 achievements (JEST Rank, GATE Rank), and a link to your Game and your Portfolio site.
-
-### Summary Checklist for a "Best" Portfolio:
-*   **Visuals:** Add a professional headshot to the top of your `index.html`. (Upload the image file, then add `<img src="me.jpg" class="w-32 h-32 rounded-full mx-auto">`).
-*   **Clean Links:** Ensure your Google Scholar and ORCID profiles are actually linked.
-*   **The Game:** Because you are an academic, presenting the game as an *implementation of your research* (like in the HTML I provided above) is much stronger than just calling it a "game." 
-
-Would you like me to create a "Profile README" template for you to use for that special repository?
